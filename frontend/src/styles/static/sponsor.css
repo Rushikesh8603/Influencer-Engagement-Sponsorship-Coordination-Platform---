@@ -1,0 +1,141 @@
+/* General Layout */
+header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #4b4b4b;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Main section styling with scrollable content */
+main {
+    padding: 20px;
+    background-color: #f4f4f4;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+/* Welcome section styling */
+.welcome h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.welcome b {
+    color: #4C10CD;
+}
+
+/* Campaign container styling */
+.campaign {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Campaign details styling */
+.campaign-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for equal width */
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.campaign-details .detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.campaign-details .detail span:first-child {
+    font-weight: bold;
+    color: #4C10CD; /* Title color */
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.campaign-details .detail span:last-child {
+    color: #333; /* Value color */
+    font-size: 16px;
+    line-height: 1.4;
+    padding-left: 8px; /* Adds slight indentation for better separation */
+    background-color: #f8f9fa; /* Subtle background color */
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+/* Action buttons styling */
+.campaign-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.delete-btn, .view-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.view-btn {
+    background-color: #f39c12;
+    margin-left: 10px;
+}
+
+.view-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Search Bar Styling */
+input[type="text"] {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #4C10CD;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3b0da2;
+}

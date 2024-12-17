@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Monthly Campaign Report</h1>
+    <h2>Sponsor: {{ sponsor_name }}</h2>
+    <p>Hello {{ sponsor_name }},</p>
+    <p>Here is your campaign report for this month:</p>
+    {% if campaigns %}
+        {% for campaign in campaigns %}
+        <h3>Campaign: {{ campaign.title }}</h3>
+        <table>
+            <tr>
+                <th>Total Requests</th>
+                <th>Accepted Requests</th>
+            </tr>
+            <tr>
+                <td>{{ campaign.total_requests or 0 }}</td>
+                <td>{{ campaign.accepted_requests or 0 }}</td>
+            </tr>
+        </table>
+        {% endfor %}
+    {% else %}
+        <p>No campaigns available for this month.</p>
+    {% endif %}
+    <p>Best regards,<br>Your Team</p>
+</body>
+</html>
